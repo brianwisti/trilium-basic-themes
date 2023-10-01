@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run sass:light && npm run sass:dark",
     "lint": "stylelint **/*.scss",
+    "lint:build": "stylelint build/theme/*.css",
     "sass:light": "sass --load-path=. src/theme/basic-light.scss build/theme/basic-light.css",
     "sass:dark": "sass --load-path=. src/theme/basic-dark.scss build/theme/basic-dark.css"
   },

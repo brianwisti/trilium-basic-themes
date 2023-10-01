@@ -70,7 +70,9 @@
 }
 
 .cm-fat-cursor-mark {
-  background-color: rgba(20 255 20 50%);
+  // Sass does not yet get new-style CSS rgba
+  /* stylelint-disable-next-line color-function-notation */
+  background-color: rgba(20, 255, 20, 50%);
 }
 
 .cm-animate-fat-cursor {
