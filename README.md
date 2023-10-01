@@ -16,6 +16,8 @@ and dark version:
 
 ![trilium with basic dark mode theme](./basic-theme-dark.jpg)
 
+A few specific adjustments for my ADHD brain: it sets colors for italic and bold text, and uses [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) if you have it on your system.
+
 ## Setup
 
 I am using the stable release of Trilium — currently 0.60.4 — so who knows if this theme will work in the beta? Heck, I only just got it working more or less for me personally.
