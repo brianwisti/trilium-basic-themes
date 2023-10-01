@@ -1,0 +1,36 @@
+// notion dark mode colors via https://optemization.com/notion-color-guide
+// fg : foreground (text) color
+// bg : background color
+// select : background color for selected elements
+:root {
+  --notion-fg-default: rgb(255 255 255); // rgba(255 255 255 / 0.9)
+  --notion-fg-gray: rgb(151 154 155); // rgba(151 154 155 / 0.95)
+  --notion-fg-brown: rgb(147 114 100);
+  --notion-fg-orange: rgb(255 163 68);
+  --notion-fg-yellow: rgb(225 220 73);
+  --notion-fg-green: rgb(77 171 154);
+  --notion-fg-blue: rgb(82 156 202);
+  --notion-fg-purple: rgb(154 109 215);
+  --notion-fg-pink: rgb(226 85 161);
+  --notion-fg-red: rgb(255 115 105);
+  --notion-bg-default: rgb(47 52 55);
+  --notion-bg-gray: rgb(69 75 78);
+  --notion-bg-brown: rgb(67 64 64);
+  --notion-bg-orange: rgb(89 74 58);
+  --notion-bg-yellow: rgb(89 86 59);
+  --notion-bg-green: rgb(53 76 75);
+  --notion-bg-blue: rgb(54 73 84);
+  --notion-bg-purple: rgb(68 63 87);
+  --notion-bg-pink: rgb(83 59 76);
+  --notion-bg-red: rgb(89 65 65);
+  --notion-select-default: rgb(80 85 88);
+  --notion-select-gray: rgb(151 154 155); // rgba(151 154 155 / 0.5)
+  --notion-select-brown: rgb(147 114 100); // rgba(147 114 100 / 0.5)
+  --notion-select-orange: rgb(255 163 68); // rgba(255 163 68 / 0.5)
+  --notion-select-yellow: rgb(255 220 73); // rgba(255 220 73 / 0.5)
+  --notion-select-green: rgb(77 171 154); // 77 171 154 / 0.5)
+  --notion-select-blue: rgb(82 156 202); // rgba(82 156 202 / 0.5)
+  --notion-select-purple: rgb(154 109 215); // rgba(154 109 215 / 0.5)
+  --notion-select-pink: rgb(226 85 161); // rgba(226 85 161 / 0.5)
+  --notion-select-red: rgb(255 115 105); // rgba(255 115 105 / 0.5)
+}

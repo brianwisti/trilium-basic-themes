@@ -1,0 +1,199 @@
+
+.CodeMirror {
+  font-family: var(--monospace-font-family);
+  color: var(--main-text-color);
+  background: var(--main-background-color);
+
+  &-activeline-background {
+    background: var(--notion-bg-gray);
+  }
+
+  &-scrollbar-filler, &-gutter-filler {
+    background-color: var(--main-background-color);
+  }
+
+  &-gutters {
+    background-color: var(--more-accented-color);
+    border-color: var(--accented-color);
+  }
+
+  &-linenumber {
+    color: var(--muted-text-color);
+  }
+
+  &-guttermarker {
+    color: var(--main-text-color);
+
+    &-subtle {
+      color: var(--muted-text-color);
+    }
+  }
+
+  &-cursor {
+    border-left-color: var(--main-text-color);
+
+    .cm-fat-cursor & {
+      background: var(--notion-bg-green);
+    }
+  }
+
+  &-matchingtag {
+    background: var(--notion-bg-orange);
+  }
+
+  &-ruler {
+    border-color: var(--accented-color);
+  }
+
+
+&-selected {
+  background: var(--notion-select-default);
+
+  .CodeMirror-focused & {
+    background: var(--notion-select-default);
+  }
+}
+
+  div.CodeMirror-secondarycursor {
+    border-color: var(--accented-background-color);
+  }
+
+  span.CodeMirror {
+    &-matchingbracket {
+      color: var(--notion-fg-green);
+    }
+
+    &-nonmatchingbracket {
+      color: var(--notion-fg-red);
+    }
+  }
+}
+
+.cm-fat-cursor-mark {
+  background-color: rgba(20 255 20 50%);
+}
+
+.cm-animate-fat-cursor {
+  background-color: var(--notion-bg-green);
+}
+
+/* DEFAULT THEME */
+.cm {
+  &-s-default {
+    .cm {
+      &-atom {
+        color: var(--notion-fg-blue);
+      }
+
+      &-attribute {
+        color: var(--notion-fg-blue);
+      }
+
+      &-bracket {
+        color: var(--notion-fg-gray);
+      }
+
+      &-builtin {
+        color: var(--notion-fg-green);
+      }
+
+      &-comment {
+        color: var(--notion-fg-gray);
+      }
+
+      &-def {
+        color: var(--notion-fg-blue);
+      }
+
+      &-error {
+        color: var(--notion-fg-red);
+      }
+
+      &-header {
+        color: var(--notion-fg-blue);
+      }
+
+      &-hr {
+        color: var(--notion-fg-gray);
+      }
+
+      &-invalidchar {
+        color: var(--notion-fg-red);
+      }
+
+      &-keyword {
+        color: var(--notion-fg-purple);
+      }
+
+      &-link {
+        color: var(--notion-fg-blue);
+      }
+
+      &-meta {
+        color: var(--notion-fg-gray);
+      }
+
+      &-number {
+        color: var(--notion-fg-green);
+      }
+
+      &-qualifier {
+        color: var(--notion-fg-gray);
+      }
+
+      &-quote {
+        color: var(--notion-fg-green);
+      }
+
+      &-string {
+        color: var(--notion-fg-red);
+
+        &-2 {
+          color: var(--notion-fg-orange);
+        }
+      }
+
+      &-tag {
+        color: var(--notion-fg-green);
+      }
+
+      &-type {
+        color: var(--notion-fg-green);
+      }
+
+      &-variable-2 {
+        color: var(--notion-fg-blue);
+      }
+
+      &-variable-3 {
+        color: var(--notion-fg-green);
+      }
+
+    }
+  }
+
+  &-negative {
+    color: var(--notion-fg-red);
+  }
+
+  &-positive {
+    color: var(--notion-fg-green);
+  }
+
+  &-searching {
+    background-color: var(--notion-bg-yellow);
+  }
+
+}
+
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+    background: var(--notion-select-default);
+  }
+
+.CodeMirror-line::-moz-selection,
+.CodeMirror-line > span::-moz-selection,
+.CodeMirror-line > span > span::-moz-selection {
+  background: var(--notion-select-default);
+}

@@ -1,0 +1,12 @@
+{
+	"extends": "stylelint-config-standard-scss",
+	"rules": {
+		"font-family-no-missing-generic-family-keyword": null,
+		"keyframes-name-pattern": null,
+		"property-no-vendor-prefix": null,
+		"selector-class-pattern": null,
+		"selector-id-pattern": null,
+		"selector-no-vendor-prefix": null,
+		"value-keyword-case": null
+	}
+}

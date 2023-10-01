@@ -1,0 +1,21 @@
+{
+  "name": "trilium-notion-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run sass:light && npm run sass:dark",
+    "lint": "stylelint **/*.scss",
+    "sass:light": "sass --load-path=. src/theme/basic-light.scss build/theme/basic-light.css",
+    "sass:dark": "sass --load-path=. src/theme/basic-dark.scss build/theme/basic-dark.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.68.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard-scss": "^11.0.0"
+  }
+}

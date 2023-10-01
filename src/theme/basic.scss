@@ -1,0 +1,102 @@
+@use "../fonts/systemstack";
+@use "../codemirror";
+@use "../trilium/main";
+
+:root {
+    --rg-prose-font: Atkinson Hyperlegible, var(--system-stack-sans-serif);
+    --rg-prose-size: 16px;
+    --theme-style: light;
+
+    // fonts: main
+    --main-font-family: var(--rg-prose-font);
+    --main-font-size: var(--rg-prose-size);
+
+    // fonts: tree
+    --tree-font-family: var(--rg-prose-font);
+    --tree-font-size: calc(var(--rg-prose-size) * 0.8);
+
+    // fonts: detail
+    --detail-font-family: var(--rg-prose-font);
+    --detail-font-size: var(--rg-prose-size);
+
+    // fonts: monospace
+    --monospace-font-family: var(--system-stack-monospace);
+    --monospace-font-size: var(--rg-prose-size);
+
+    // colors: main
+    --main-background-color: var(--notion-bg-default);
+    --main-border-color: var(--notion-fg-gray);
+    --main-text-color: var(--notion-fg-default);
+
+    // colors: accents
+    --accented-background-color: var(--notion-bg-blue);
+    --more-accented-background-color: var(--notion-bg-gray);
+
+    // colors: buttons
+    --button-background-color: transparent;
+    --button-border-color: var(--more-accented-background-color);
+    --button-text-color: var(--main-text-color);
+    --button-disabled-background-color: var(--more-accented-background-color);
+    --button-disabled-text-color: var(--main-text-color);
+
+    // layout: buttons
+    --button-border-radius: 5px;
+
+    // colors: buttons: primary
+    --primary-button-background-color: var(--notion-bg-blue);
+    --primary-button-border-color: var(--notion-select-blue);
+
+    // current opacity makes the contrast low when using bg color for text
+    --primary-button-text-color: var(--notion-fg-default);
+
+    // muted text color
+    --muted-text-color: var(--notion-select-gray);
+
+    // forms: inputs
+    --input-text-color: var(--main-text-color);
+    --input-background-color: transparent;
+    --hover-item-text-color: var(--main-text-color);
+    --hover-item-background-color: transparent;
+    --hover-item-border-color: var(--main-border-color);
+    --active-item-text-color: var(--main-text-color);
+    --active-item-background-color: var(--accented-background-color);
+    --active-item-border-color: transparent;
+    --menu-text-color: var(--main-text-color);
+    --menu-background-color: var(--main-background-color);
+    --modal-background-color: var(--main-background-color);
+    --modal-backdrop-color: var(--main-text-color);
+
+    // left pane
+    --left-pane-background-color: var(--main-background-color);
+    --left-pane-text-color: var(--main-text-color);
+
+    // launcher
+    --launcher-pane-background-color: var(--accented-background-color);
+    --launcher-pane-text-color: var(--main-text-color);
+
+    // tabs: active
+    --active-tab-background-color: var(--accented-background-color);
+    --active-tab-hover-background-color: var(--notion-select-default);
+    --active-tab-text-color: var(--main-text-color);
+
+    // tabs: inactive
+    --inactive-tab-background-color: var(--notion-bg-gray);
+    --inactive-tab-hover-background-color: var(--notion-select-default);
+    --inactive-tab-text-color: var(--muted-text-color);
+    --scrollbar-border-color: var(--more-accented-background-color);
+    --tooltip-background-color: var(--notion-select-default);
+    --link-color: var(--notion-fg-blue);
+    --mermaid-theme: default;
+}
+
+em, i {
+    color: var(--notion-fg-green);
+}
+
+strong, b {
+    color: var(--notion-fg-red);
+}
+
+input.note-title {
+    font-weight: 500;
+}
