@@ -1,38 +1,5 @@
 @charset "UTF-8";
 :root {
-  --notion-fg-default: rgb(55 53 47);
-  --notion-fg-gray: rgb(155 154 151);
-  --notion-fg-brown: rgb(100 71 58);
-  --notion-fg-orange: rgb(217 115 13);
-  --notion-fg-yellow: rgb(223 171 1);
-  --notion-fg-green: rgb(15 123 108);
-  --notion-fg-blue: rgb(11 110 153);
-  --notion-fg-purple: rgb(105 64 165);
-  --notion-fg-pink: rgb(173 26 114);
-  --notion-fg-red: rgb(224 62 62);
-  --notion-bg-default: rgb(255 255 255);
-  --notion-bg-gray: rgb(235 236 237);
-  --notion-bg-brown: rgb(233 229 227);
-  --notion-bg-orange: rgb(250 235 221);
-  --notion-bg-yellow: rgb(251 243 219);
-  --notion-bg-green: rgb(221 237 234);
-  --notion-bg-blue: rgb(221 235 241);
-  --notion-bg-purple: rgb(234 228 242);
-  --notion-bg-pink: rgb(244 223 235);
-  --notion-bg-red: rgb(251 228 228);
-  --notion-select-default: rgb(206 205 202);
-  --notion-select-gray: rgb(155 154 151);
-  --notion-select-brown: rgb(140 46 0);
-  --notion-select-orange: rgb(245 93 0);
-  --notion-select-yellow: rgb(233 168 0);
-  --notion-select-green: rgb(0 135 107);
-  --notion-select-blue: rgb(0 120 223);
-  --notion-select-purple: rgb(103 36 222);
-  --notion-select-pink: rgb(221 0 129);
-  --notion-select-red: rgb(255 0 26);
-}
-
-:root {
   --system-stack-sans-serif:
     -apple-system,
     BlinkMacSystemFont,
@@ -150,6 +117,106 @@
   text-decoration: underline !important;
 }
 
+body {
+  /* -- Overrides generic colors. ------------------------------------------------------------- */
+  --ck-color-base-text: var(--main-text-color);
+  --ck-color-base-foreground: var(--accented-background-color);
+  --ck-color-focus-border: var(--main-border-color);
+  --ck-color-text: var(--main-text-color);
+  --ck-color-shadow-drop: var(--main-background-color);
+  --ck-color-shadow-inner: var(--main-background-color);
+  --ck-color-table-caption-text: var(--main-text-color);
+  --ck-color-table-caption-background: var(--accented-background-color);
+  --ck-color-table-caption-highlighted-background: var(--accented-background-color);
+  /* -- Overrides the default .ck-button class colors. ---------------------------------------- */
+  --ck-color-button-default-background: var(--accented-background-color);
+  --ck-color-button-default-hover-background: var(--more-accented-background-color);
+  --ck-color-button-default-active-background: var(--more-accented-background-color);
+  --ck-color-button-default-active-shadow: var(--more-accented-background-color);
+  --ck-color-button-default-disabled-background: var(--accented-background-color);
+  --ck-color-button-on-background: var(--accented-background-color);
+  --ck-color-button-on-hover-background: var(--more-accented-background-color);
+  --ck-color-button-on-active-background: var(--more-accented-background-color);
+  --ck-color-button-on-active-shadow: var(--more-accented-background-color);
+  --ck-color-button-on-disabled-background: var(--main-background-color);
+  --ck-color-button-action-background: var(--accented-background-color);
+  --ck-color-button-action-hover-background: var(--more-accented-background-color);
+  --ck-color-button-action-active-background: var(--more-accented-background-color);
+  --ck-color-button-action-active-shadow: var(--more-accented-background-color);
+  --ck-color-button-action-disabled-background: var(--main-background-color);
+  --ck-color-button-action-text: var(--main-text-color);
+  --ck-color-button-save: var(--notion-fg-blue);
+  --ck-color-button-cancel: var(--notion-fg-red);
+  /* -- Overrides the default .ck-dropdown class colors. -------------------------------------- */
+  --ck-color-dropdown-panel-background: var(--accented-background-color);
+  --ck-color-dropdown-panel-border: var(--main-border-color);
+  /* -- Overrides the default .ck-splitbutton class colors. ----------------------------------- */
+  --ck-color-split-button-hover-background: var(--ck-color-button-default-hover-background);
+  --ck-color-split-button-hover-border: var(--main-border-color);
+  /* -- Overrides the default .ck-input class colors. ----------------------------------------- */
+  --ck-color-input-background: var(--accented-background-color);
+  --ck-color-input-border: var(--main-border-color);
+  --ck-color-input-text: var(--main-text-color);
+  --ck-color-input-disabled-background: var(--main-background-color);
+  --ck-color-input-disabled-border: var(--main-border-color);
+  --ck-color-input-disabled-text: var(--muted-text-color);
+  /* -- Overrides the default .ck-list class colors. ------------------------------------------ */
+  --ck-color-list-background: var(--accented-background-color);
+  --ck-color-list-button-hover-background: var(--ck-color-base-foreground);
+  --ck-color-list-button-on-background: var(--ck-color-base-active);
+  --ck-color-list-button-on-background-focus: var(--ck-color-base-active-focus);
+  --ck-color-list-button-on-text: var(--ck-color-base-background);
+  /* -- Overrides the default .ck-balloon-panel class colors. --------------------------------- */
+  --ck-color-panel-background: var(--accented-background-color);
+  --ck-color-panel-border: var(--main-border-color);
+  /* -- Overrides the default .ck-toolbar class colors. --------------------------------------- */
+  --ck-color-toolbar-background: var(--accented-background-color);
+  --ck-color-toolbar-border: var(--main-border-color);
+  /* -- Overrides the default .ck-tooltip class colors. --------------------------------------- */
+  --ck-color-tooltip-background: var(--accented-background-color);
+  --ck-color-tooltip-text: var(--main-text-color);
+  /* -- Overrides the default colors used by the ckeditor5-image package. --------------------- */
+  --ck-color-image-caption-background: var(--main-background-color);
+  --ck-color-image-caption-text: var(--main-text-color);
+  /* -- Overrides the default colors used by the ckeditor5-widget package. -------------------- */
+  --ck-color-widget-blurred-border: var(--main-border-color);
+  --ck-color-widget-hover-border: var(--main-border-color);
+  --ck-color-widget-editable-focus-background: var(--main-background-color);
+  /* -- Overrides the default colors used by the ckeditor5-link package. ---------------------- */
+  --ck-color-link-default: var(--link-color);
+  --ck-color-table-focused-cell-background: var(--more-accented-background-color);
+  --ck-color-labeled-field-label-background: var(--accented-background-color);
+  --ck-color-editable-blur-selection: var(--accented-background-color);
+  /* todo lists */
+  --ck-color-todo-list-checkmark-border: var(--main-border-color);
+  --ck-color-engine-placeholder-text: var(--muted-text-color);
+  --ck-z-modal: 10000;
+  --ck-color-widget-type-around-button: var(--main-border-color);
+  --ck-color-widget-type-around-button-hover: var(--main-border-color);
+}
+
+.ck {
+  /**
+      ckeditor's autocomplete
+      should be higher than 1070 of tooltip
+  */
+}
+.ck.ck-mentions > .ck-list__item {
+  max-width: 700px;
+}
+.ck.ck-mentions > .ck-list__item .ck-button {
+  /* wrap text for very long note path title */
+  white-space: normal !important;
+}
+.ck.ck-balloon-panel {
+  z-index: 1101;
+}
+
+.ck-content .todo-list .todo-list__label > input[checked]::before {
+  background: var(--notion-fg-blue);
+  border-color: var(--notion-fg-blue);
+}
+
 @media print {
   .no-print, .no-print * {
     display: none !important;
@@ -174,7 +241,7 @@
   background-color: var(--accented-background-color);
   color: var(--main-text-color);
   z-index: 4;
-  border: 1px solid #666;
+  border: 1px solid var(--more-accented-background-color);
   box-shadow: 2px 2px 19px #999;
   border-radius: 8px;
   opacity: 0.8;
@@ -199,7 +266,7 @@
   opacity: 0.8;
   padding: 0.3em;
   border-radius: 0.5em;
-  border: 1px solid #666;
+  border: 1px solid var(--more-accented-background-color);
   cursor: pointer;
 }
 .note-detail-relation-map .connection-label.jtk-hover {
@@ -211,7 +278,7 @@
   right: 5px;
   width: 1em;
   height: 1em;
-  background-color: #333;
+  background-color: var(--accented-background-color);
   cursor: pointer;
   box-shadow: 0 0 2px black;
 }
@@ -389,20 +456,6 @@ iframe.pdf-view {
   #layout.showMenu #toggleMenuButton::after {
     content: "«";
   }
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Light.ttf");
-  font-weight: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: JetBrainsLight;
-  src: url("../fonts/JetBrainsMono-Light.woff2") format("woff");
 }
 ::-webkit-scrollbar {
   width: 12px;
@@ -1149,23 +1202,6 @@ li.dropdown-submenu:hover > ul.dropdown-menu {
   display: none !important;
 }
 
-.ck.ck-mentions > .ck-list__item {
-  max-width: 700px;
-}
-
-.ck.ck-mentions > .ck-list__item .ck-button {
-  /* wrap text for very long note path title */
-  white-space: normal !important;
-}
-
-/**
-    ckeditor's autocomplete
-    should be higher than 1070 of tooltip
-*/
-.ck.ck-balloon-panel {
-  z-index: 1101;
-}
-
 .area-expander-text {
   padding-left: 20px;
   padding-right: 20px;
@@ -1717,6 +1753,40 @@ span.fancy-tree-node.fancytree-hide {
 
 input.note-title {
   font-weight: 500;
+}
+
+:root {
+  --theme-style: light;
+  --notion-fg-default: rgb(55 53 47);
+  --notion-fg-gray: rgb(155 154 151);
+  --notion-fg-brown: rgb(100 71 58);
+  --notion-fg-orange: rgb(217 115 13);
+  --notion-fg-yellow: rgb(223 171 1);
+  --notion-fg-green: rgb(15 123 108);
+  --notion-fg-blue: rgb(11 110 153);
+  --notion-fg-purple: rgb(105 64 165);
+  --notion-fg-pink: rgb(173 26 114);
+  --notion-fg-red: rgb(224 62 62);
+  --notion-bg-default: rgb(255 255 255);
+  --notion-bg-gray: rgb(235 236 237);
+  --notion-bg-brown: rgb(233 229 227);
+  --notion-bg-orange: rgb(250 235 221);
+  --notion-bg-yellow: rgb(251 243 219);
+  --notion-bg-green: rgb(221 237 234);
+  --notion-bg-blue: rgb(221 235 241);
+  --notion-bg-purple: rgb(234 228 242);
+  --notion-bg-pink: rgb(244 223 235);
+  --notion-bg-red: rgb(251 228 228);
+  --notion-select-default: rgb(206 205 202);
+  --notion-select-gray: rgb(155 154 151);
+  --notion-select-brown: rgb(140 46 0);
+  --notion-select-orange: rgb(245 93 0);
+  --notion-select-yellow: rgb(233 168 0);
+  --notion-select-green: rgb(0 135 107);
+  --notion-select-blue: rgb(0 120 223);
+  --notion-select-purple: rgb(103 36 222);
+  --notion-select-pink: rgb(221 0 129);
+  --notion-select-red: rgb(255 0 26);
 }
 
 /*# sourceMappingURL=basic-light.css.map */

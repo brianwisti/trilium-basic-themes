@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "full": "npm run build && npm run lint:build",
     "build": "npm run sass:light && npm run sass:dark",
     "lint": "stylelint **/*.scss",
     "lint:build": "stylelint build/theme/*.css",

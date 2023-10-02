@@ -1,5 +1,6 @@
 @charset "UTF-8";
 :root {
+  --theme-style: dark;
   --notion-fg-default: rgb(255 255 255);
   --notion-fg-gray: rgb(151 154 155);
   --notion-fg-brown: rgb(147 114 100);
@@ -150,6 +151,106 @@
   text-decoration: underline !important;
 }
 
+body {
+  /* -- Overrides generic colors. ------------------------------------------------------------- */
+  --ck-color-base-text: var(--main-text-color);
+  --ck-color-base-foreground: var(--accented-background-color);
+  --ck-color-focus-border: var(--main-border-color);
+  --ck-color-text: var(--main-text-color);
+  --ck-color-shadow-drop: var(--main-background-color);
+  --ck-color-shadow-inner: var(--main-background-color);
+  --ck-color-table-caption-text: var(--main-text-color);
+  --ck-color-table-caption-background: var(--accented-background-color);
+  --ck-color-table-caption-highlighted-background: var(--accented-background-color);
+  /* -- Overrides the default .ck-button class colors. ---------------------------------------- */
+  --ck-color-button-default-background: var(--accented-background-color);
+  --ck-color-button-default-hover-background: var(--more-accented-background-color);
+  --ck-color-button-default-active-background: var(--more-accented-background-color);
+  --ck-color-button-default-active-shadow: var(--more-accented-background-color);
+  --ck-color-button-default-disabled-background: var(--accented-background-color);
+  --ck-color-button-on-background: var(--accented-background-color);
+  --ck-color-button-on-hover-background: var(--more-accented-background-color);
+  --ck-color-button-on-active-background: var(--more-accented-background-color);
+  --ck-color-button-on-active-shadow: var(--more-accented-background-color);
+  --ck-color-button-on-disabled-background: var(--main-background-color);
+  --ck-color-button-action-background: var(--accented-background-color);
+  --ck-color-button-action-hover-background: var(--more-accented-background-color);
+  --ck-color-button-action-active-background: var(--more-accented-background-color);
+  --ck-color-button-action-active-shadow: var(--more-accented-background-color);
+  --ck-color-button-action-disabled-background: var(--main-background-color);
+  --ck-color-button-action-text: var(--main-text-color);
+  --ck-color-button-save: var(--notion-fg-blue);
+  --ck-color-button-cancel: var(--notion-fg-red);
+  /* -- Overrides the default .ck-dropdown class colors. -------------------------------------- */
+  --ck-color-dropdown-panel-background: var(--accented-background-color);
+  --ck-color-dropdown-panel-border: var(--main-border-color);
+  /* -- Overrides the default .ck-splitbutton class colors. ----------------------------------- */
+  --ck-color-split-button-hover-background: var(--ck-color-button-default-hover-background);
+  --ck-color-split-button-hover-border: var(--main-border-color);
+  /* -- Overrides the default .ck-input class colors. ----------------------------------------- */
+  --ck-color-input-background: var(--accented-background-color);
+  --ck-color-input-border: var(--main-border-color);
+  --ck-color-input-text: var(--main-text-color);
+  --ck-color-input-disabled-background: var(--main-background-color);
+  --ck-color-input-disabled-border: var(--main-border-color);
+  --ck-color-input-disabled-text: var(--muted-text-color);
+  /* -- Overrides the default .ck-list class colors. ------------------------------------------ */
+  --ck-color-list-background: var(--accented-background-color);
+  --ck-color-list-button-hover-background: var(--ck-color-base-foreground);
+  --ck-color-list-button-on-background: var(--ck-color-base-active);
+  --ck-color-list-button-on-background-focus: var(--ck-color-base-active-focus);
+  --ck-color-list-button-on-text: var(--ck-color-base-background);
+  /* -- Overrides the default .ck-balloon-panel class colors. --------------------------------- */
+  --ck-color-panel-background: var(--accented-background-color);
+  --ck-color-panel-border: var(--main-border-color);
+  /* -- Overrides the default .ck-toolbar class colors. --------------------------------------- */
+  --ck-color-toolbar-background: var(--accented-background-color);
+  --ck-color-toolbar-border: var(--main-border-color);
+  /* -- Overrides the default .ck-tooltip class colors. --------------------------------------- */
+  --ck-color-tooltip-background: var(--accented-background-color);
+  --ck-color-tooltip-text: var(--main-text-color);
+  /* -- Overrides the default colors used by the ckeditor5-image package. --------------------- */
+  --ck-color-image-caption-background: var(--main-background-color);
+  --ck-color-image-caption-text: var(--main-text-color);
+  /* -- Overrides the default colors used by the ckeditor5-widget package. -------------------- */
+  --ck-color-widget-blurred-border: var(--main-border-color);
+  --ck-color-widget-hover-border: var(--main-border-color);
+  --ck-color-widget-editable-focus-background: var(--main-background-color);
+  /* -- Overrides the default colors used by the ckeditor5-link package. ---------------------- */
+  --ck-color-link-default: var(--link-color);
+  --ck-color-table-focused-cell-background: var(--more-accented-background-color);
+  --ck-color-labeled-field-label-background: var(--accented-background-color);
+  --ck-color-editable-blur-selection: var(--accented-background-color);
+  /* todo lists */
+  --ck-color-todo-list-checkmark-border: var(--main-border-color);
+  --ck-color-engine-placeholder-text: var(--muted-text-color);
+  --ck-z-modal: 10000;
+  --ck-color-widget-type-around-button: var(--main-border-color);
+  --ck-color-widget-type-around-button-hover: var(--main-border-color);
+}
+
+.ck {
+  /**
+      ckeditor's autocomplete
+      should be higher than 1070 of tooltip
+  */
+}
+.ck.ck-mentions > .ck-list__item {
+  max-width: 700px;
+}
+.ck.ck-mentions > .ck-list__item .ck-button {
+  /* wrap text for very long note path title */
+  white-space: normal !important;
+}
+.ck.ck-balloon-panel {
+  z-index: 1101;
+}
+
+.ck-content .todo-list .todo-list__label > input[checked]::before {
+  background: var(--notion-fg-blue);
+  border-color: var(--notion-fg-blue);
+}
+
 @media print {
   .no-print, .no-print * {
     display: none !important;
@@ -174,7 +275,7 @@
   background-color: var(--accented-background-color);
   color: var(--main-text-color);
   z-index: 4;
-  border: 1px solid #666;
+  border: 1px solid var(--more-accented-background-color);
   box-shadow: 2px 2px 19px #999;
   border-radius: 8px;
   opacity: 0.8;
@@ -199,7 +300,7 @@
   opacity: 0.8;
   padding: 0.3em;
   border-radius: 0.5em;
-  border: 1px solid #666;
+  border: 1px solid var(--more-accented-background-color);
   cursor: pointer;
 }
 .note-detail-relation-map .connection-label.jtk-hover {
@@ -211,7 +312,7 @@
   right: 5px;
   width: 1em;
   height: 1em;
-  background-color: #333;
+  background-color: var(--accented-background-color);
   cursor: pointer;
   box-shadow: 0 0 2px black;
 }
@@ -389,20 +490,6 @@ iframe.pdf-view {
   #layout.showMenu #toggleMenuButton::after {
     content: "«";
   }
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Light.ttf");
-  font-weight: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: JetBrainsLight;
-  src: url("../fonts/JetBrainsMono-Light.woff2") format("woff");
 }
 ::-webkit-scrollbar {
   width: 12px;
@@ -1147,23 +1234,6 @@ li.dropdown-submenu:hover > ul.dropdown-menu {
 
 .hidden-int, .hidden-ext {
   display: none !important;
-}
-
-.ck.ck-mentions > .ck-list__item {
-  max-width: 700px;
-}
-
-.ck.ck-mentions > .ck-list__item .ck-button {
-  /* wrap text for very long note path title */
-  white-space: normal !important;
-}
-
-/**
-    ckeditor's autocomplete
-    should be higher than 1070 of tooltip
-*/
-.ck.ck-balloon-panel {
-  z-index: 1101;
 }
 
 .area-expander-text {
