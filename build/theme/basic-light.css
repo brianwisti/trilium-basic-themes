@@ -1165,6 +1165,25 @@ li.dropdown-submenu:hover > ul.dropdown-menu {
   max-width: 999999px;
 }
 
+.edited-notes-list {
+  background-color: var(--notion-bg-gray);
+  padding: 0.5em 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.edited-notes-list > .edited-note-line {
+  visibility: hidden;
+  padding: 0 0.5em;
+  list-style: none;
+}
+.edited-notes-list > .edited-note-line > span {
+  visibility: visible;
+}
+.edited-notes-list > .edited-note-line > span small {
+  color: var(--muted-text-color);
+}
+
 .add-note-button {
   display: none;
 }

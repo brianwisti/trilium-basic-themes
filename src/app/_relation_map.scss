@@ -1,0 +1,89 @@
+.type-relation-map .note-detail {
+    height: 100%;
+}
+
+.note-detail-relation-map {
+    height: 100%;
+    overflow: hidden !important;
+    padding: 10px;
+    position: relative;
+
+    .note-box {
+        padding: 16px;
+        position: absolute !important;
+        background-color: var(--accented-background-color);
+        color: var(--main-text-color);
+        z-index: 4;
+        border: 1px solid var(--more-accented-background-color);
+        box-shadow: 2px 2px 19px #999;
+        border-radius: 8px;
+        opacity: 0.8;
+        font-size: 11px;
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        min-width: 150px;
+        max-height: 200px;
+        overflow: hidden;
+
+        &:hover {
+            background-color: var(--more-accented-background-color);
+        }
+
+        .title {
+            font-size: larger;
+            font-weight: 600;
+        }
+    }
+
+    .connection-label {
+        background-color: var(--accented-background-color);
+        color: var(--main-text-color);
+        opacity: 0.8;
+        padding: 0.3em;
+        border-radius: 0.5em;
+        border: 1px solid var(--more-accented-background-color);
+        cursor: pointer;
+
+        &.jtk-hover {
+            background-color: var(--more-accented-background-color);
+        }
+    }
+
+    .endpoint {
+        position: absolute;
+        bottom: 37%;
+        right: 5px;
+        width: 1em;
+        height: 1em;
+        background-color: var(--accented-background-color);
+        cursor: pointer;
+        box-shadow: 0 0 2px black;
+
+        &:hover {
+            box-shadow: 0 0 6px black;
+        }
+    }
+
+    .dragHover {
+        border: 2px solid orange;
+    }
+
+    path, .jtk-endpoint { cursor:pointer; }
+
+    .ui-contextmenu {
+        z-index: 100;
+    }
+}
+
+.jtk-source-hover, .jtk-target-hover {
+    background-color: var(--more-accented-background-color);
+}
+
+.relation-map-wrapper {
+    position: relative;
+    height: 100%;
+    outline: none; /* remove dotted outline on click */
+}
+
+

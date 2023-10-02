@@ -1,0 +1,257 @@
+.add-note-button {
+    display: none;
+}
+
+.bx.tree-item-button {
+    display: none;
+    font-size: 120%;
+    cursor: pointer;
+    margin-left: 8px;
+    padding: 1px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+ul.fancytree-container {
+    padding-left: 0;
+    outline: none;
+    background-color: inherit;
+
+    li {
+        list-style: none;
+        contain: layout paint;
+    }
+}
+
+.fancytree-title {
+    margin-left: 7px;
+    outline: none;
+    position: relative;
+    top: 2px;
+
+    &:hover {
+        border: 0;
+    }
+}
+
+.fancytree-expander {
+    visibility: hidden;
+}
+
+.fancytree-folder .fancytree-expander {
+    visibility: visible;
+}
+
+.fancytree-node {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+
+    &.fancytree-expanded .fancytree-expander::before {
+        font-family: boxicons !important;
+        content: "\ea4a"; /* lookup code for "chevron-down" in boxicons.css */
+    }
+
+    &:not(.fancytree-loading) .fancytree-expander {
+        background: none;
+        height: auto;
+        text-align: center;
+
+        &::before {
+            color: var(--main-background-color); /* setting to background color makes this invisible */
+            font-family: boxicons !important;
+            content: "\ea50"; /* lookup code for "chevron-right" in boxicons.css */
+            speak: none;
+            font-size: x-large;
+            text-transform: none;
+            line-height: 1;
+            position: relative;
+            top: 2px;
+            margin-right: 5px;
+        }
+    }
+
+    /* this is done to preserve correct indentation. Better solution would be preferable */
+    &:not(.fancytree-folder) .fancytree-expander::before {
+        color: var(--main-background-color); /* setting to background color makes this invisible */
+    }
+
+    &:hover .bx.tree-item-button {
+        display: inline-block;
+    }
+}
+
+.fancytree-loading span.fancytree-expander {
+    background-image: none;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 4px 8px 2px 5px;
+
+    &::after {
+        content: " ";
+        color: inherit !important;
+        display: block;
+        border-radius: 50%;
+        border-color: #000 transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+        width: 12px;
+        height: 12px;
+        margin-top: 4px;
+        margin-left: 1px;
+        border-width: 1px;
+        border-style: solid;
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+span.fancytree-active {
+    color: var(--active-item-text-color) !important;
+    background-color: var(--active-item-background-color) !important;
+    border-color: transparent; /* invisible border */
+    border-radius: 5px;
+
+    .fancytree-title {
+        font-weight: bold;
+        border: 0;
+    }
+}
+
+span.fancytree-selected {
+    border-color: var(--main-border-color) !important;
+    border-radius: 5px;
+
+    .fancytree-title {
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    .fancytree-custom-icon::before {
+        content: "\eb43";
+        border: 1px solid var(--main-border-color);
+        border-radius: 3px;
+    }
+}
+
+/** some common text styling for cssClass label */
+span.fancy-tree-node {
+    &:hover {
+        border: 1px solid var(--main-border-color);
+
+        .fancytree-title {
+            border: 0;
+        }
+
+        .add-note-button {
+            display: inline-block;
+        }
+    }
+
+    &.underline .fancytree-title { text-decoration: underline; }
+
+    &.dotted .fancytree-title { text-decoration: dotted; }
+
+    &.bold .fancytree-title { font-weight: bold; }
+
+    &.muted .fancytree-title { opacity: 0.6; }
+
+    &.protected > span.fancytree-custom-icon {
+        filter: drop-shadow(2px 2px 2px var(--main-text-color));
+    }
+
+    &.multiple-parents .fancytree-title::after {
+        content: " *";
+    }
+
+    &.shared .fancytree-title::after {
+        font-family: boxicons !important;
+        font-size: smaller;
+        content: " \ec03"; /* lookup code for "share-alt" in boxicons.css */
+    }
+
+    &.fancytree-active-clone:not(.fancytree-active) .fancytree-title {
+        font-weight: bold;
+    }
+
+    &.archived {
+        opacity: 0.6;
+    }
+
+    &.fancytree-hide {
+        display: none;
+    }
+}
+
+.ui-fancytree ul {
+    padding-left: 20px;
+
+    /* first nesting level has lower left padding to avoid extra left padding. Other levels are not affected */
+    & > li > ul {
+        padding-left: 5px;
+    }
+}
+
+/** following will hide ancestors of hoisted (filtered) note */
+.fancytree-submatch:not(.fancytree-match) {
+    display: none !important;
+
+
+
+    /** resets indent of hoisted note */
+    & + ul {
+        padding: 0 !important;
+    }
+}
+
+.fancytree-custom-icon {
+    font-size: 1.2em;
+}
+
+.tree-item-button:hover {
+    border: 1px dotted var(--main-text-color);
+}
+
+.fancytree-drop-accept {
+    border: 1px solid var(--main-border-color);
+}
+
+#fancytree-drop-marker {
+    &.fancytree-drop-after {
+        border-bottom: 1px solid var(--muted-text-color);
+        width: 100px;
+
+        /* marker is by default position: relative which doesn't make sense */
+        position: absolute !important;
+
+        /* heaving a height helps with positioning since the algorithm calculating "top" takes it into account */
+        height: 19px;
+    }
+
+    &.fancytree-drop-before {
+        border-top: 1px solid var(--muted-text-color);
+        width: 100px;
+
+        /* marker is by default position: relative which doesn't make sense */
+        position: absolute !important;
+
+        /* heaving a height helps with positioning since the algorithm calculating "top" takes it into account */
+        height: 19px;
+    }
+}

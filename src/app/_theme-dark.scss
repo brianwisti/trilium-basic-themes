@@ -1,0 +1,100 @@
+:root {
+    --theme-style: dark;
+
+    // fonts
+    --main-font-family: Montserrat;
+    --main-font-size: normal;
+    --tree-font-family: Montserrat;
+    --tree-font-size: normal;
+    --detail-font-family: Montserrat;
+    --detail-font-size: normal;
+    --monospace-font-family: JetBrainsLight;
+    --monospace-font-size: normal;
+
+    // main colors
+    --main-background-color: #333;
+    --main-text-color: #ccc;
+    --main-border-color: #aaa;
+
+    // accent colors
+    --accented-background-color: #555;
+    --more-accented-background-color: #777;
+
+    // muted text colors
+    --muted-text-color: #bbb;
+
+    // button colors
+    --button-background-color: transparent;
+    --button-border-color: #ccc;
+    --button-text-color: currentColor;
+    --button-border-radius: 5px;
+    --button-disabled-background-color: transparent;
+    --button-disabled-text-color: #999;
+
+    // primary button
+    --primary-button-background-color: #888;
+    --primary-button-text-color: white;
+    --primary-button-border-color: #999;
+
+    // form input colors
+    --input-text-color: #ccc;
+    --input-background-color: #333;
+
+    // hover item colors
+    --hover-item-text-color: #ccc;
+    --hover-item-background-color: transparent;
+    --hover-item-border-color: #aaa;
+
+    // current active item colors
+    --active-item-text-color: black;
+    --active-item-background-color: #777;
+    --active-item-border-color: transparent;
+
+    // menu colors
+    --menu-text-color: white;
+    --menu-background-color: #222;
+
+    // modal dialog colors
+    --modal-background-color: #333;
+    --modal-backdrop-color: #444;
+
+    // left pane sidebar colors
+    --left-pane-background-color: #1f1f1f;
+    --left-pane-text-color: #AAA;
+
+    // launcher pane colors
+    --launcher-pane-background-color: #1f1f1f;
+    --launcher-pane-text-color: #AAA;
+
+    // active tab colors
+    --active-tab-background-color: #666;
+    --active-tab-hover-background-color: #737373;
+    --active-tab-text-color: #ccc;
+
+    // inactive tab colors
+    --inactive-tab-background-color: #444;
+    --inactive-tab-hover-background-color: #525252;
+    --inactive-tab-text-color: #bbb;
+
+    // misc adornments
+    --scrollbar-border-color: #888;
+    --tooltip-background-color: #333;
+    --link-color: lightskyblue;
+    --mermaid-theme: dark;
+}
+
+body .global-menu-button {
+    background-image: url("../images/icon-grey.png");
+}
+
+body ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+body .CodeMirror {
+    filter: invert(90%) hue-rotate(180deg);
+}
+
+.excalidraw.theme--dark {
+    --theme-filter: invert(80%) hue-rotate(180deg) !important;
+}
